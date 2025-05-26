@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<!-- 
+Tutorial: https://www.youtube.com/watch?v=zxxB9SFh9p4
+-->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="coracao.png" type="imagem/tipo de ícone">
+    <title>Joguin pra fidida</title>
+    <link href="https://db.onlinewebfonts.com/c/21f923b6b85ae8f910b453f4c6a60442?family=CCMeanwhile+Regular" rel="stylesheet">
+</head>
+
+<body>
+    <div id="conteudo">
+        <h2 style="color: #f2f2f2;">Será que eu te amu?</h2>
+        <div style="margin: auto;width: 170px;">
+            <button style="position: fixed;display: block;" class="btn" onclick="sim()">SIM</button>
+            <button class="btn" onclick="desvia(this)" onmouseover="desvia(this)" style="position: absolute;">NÃO</button>
+        </div>
+    </div>
+</body>
+<style>
+        #conteudo {
+            background: #010101;
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            padding: 10px;
+            text-align: center;
+            font-family: "CCMeanwhile Regular";            
+            font-optical-sizing: auto;
+        }
+
+        .btn {
+            background: #FF1B1B;
+            color: #f2f2f2;
+            border: none;
+            padding: 10px;
+            width: 80px;
+            border-radius: 5px;
+            font-family: "CCMeanwhile Regular";
+            font-size: 12px;
+            cursor: pointer;
+        ;
+    }
+</style>
+
+<script>
+        function sim() {
+        alert("é claro que sim! Segura a pedrada");
+        // redireciona para um URL após clicar no SIM
+        location.href = "https://music.youtube.com/watch?v=uwjkgChj4JU";
+    }
+
+    function desvia(btn) {
+        // btn declarado na função
+        btn.style.position = 'absolute';
+        btn.style.bottom = geraPosicao(10, 90);
+        btn.style.left = geraPosicao(10, 90);
+        console.log('opa, desviei...');
+    }
+
+    function geraPosicao(min, max) {
+        return (Math.random() * (max - min) + min) + "%";
+    }
+
+</script>
+
+</html>
